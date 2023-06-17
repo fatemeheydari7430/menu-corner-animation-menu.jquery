@@ -1,0 +1,122 @@
+@font-face{
+    font-family:vazir-medium ;
+    src: url("../fonts/Vazir-Medium.eot") format("eot"),
+    url("../fonts/Vazir-Medium.woff") format("woff"),
+    url("../fonts/Vazir-Medium.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+  }
+  *,
+  body {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: vazir-medium;
+  }
+  
+  body{
+      direction: rtl;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul,
+  ol,
+  li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+
+
+  body{
+    background-color: #ededed;
+  }
+  .course-title{
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 34px;
+      color: #000;
+      margin-top: 100px;
+  }
+  .circle-menu{
+      position: fixed;
+      bottom: 1em;
+      right: 1em;
+  }
+  .circle-menu .menu-btn{
+      display: block;
+      width: 3.5em;
+      height: 3.5em;
+      background-color: #fd4235;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      color: #fff;
+      cursor: pointer;
+      text-align: center;
+      line-height: 3.9;
+  }
+  .circle-menu.active .menu-btn{
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  }
+  .circle-menu .menu-btn:active{
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  }
+  .circle-menu .menu-btn i{
+      font-size: 1.3em;
+      transition: all 0.2s ease;
+  }
+  .circle-menu.active .menu-btn i{
+      transform: rotate(45deg);
+  }
+  .circle-menu::after{
+      content: '';
+      display: block;
+      width: 3.5em;
+      height: 3.5em;
+      background-color: #fd4235;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: all 0.3s ease;
+      z-index: -2;
+  }
+  .circle-menu.active::after{
+      transform: scale3d(5.5, 5.5, 1);
+      transition: all 0.2s cubic-bezier(.68,1.5,.25,1);
+  }
+  .circle-menu .items-wrapper .menu-item{
+      position: absolute;
+      top: .2em;
+      right: .2em;
+      display: block;
+      width: 3em;
+      height: 3em;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 3;
+      z-index: -1;
+      background-color: rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+  }
+  .circle-menu .items-wrapper .menu-item:hover{
+      background-color: rgba(0, 0, 0, 0.3);
+  }
+  .circle-menu.active .items-wrapper .menu-item:nth-child(1){
+      transform: translate3d(1em,-7em,0);
+  }
+  .circle-menu.active .items-wrapper .menu-item:nth-child(2){
+      transform: translate3d(-3.5em,-6.3em,0);
+  }
+  .circle-menu.active .items-wrapper .menu-item:nth-child(3){
+      transform: translate3d(-6.5em,-3.2em,0);
+  }
+  .circle-menu.active .items-wrapper .menu-item:nth-child(4){
+      transform: translate3d(-7em,1em,0);
+  }
